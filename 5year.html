@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 5th Anniversary Game!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ffafbd, #ffc3a0);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            padding: 40px;
+            border: 5px solid #ff6f61;
+            border-radius: 20px;
+            background: white;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #ff6f61;
+        }
+        .heart {
+            font-size: 4em;
+            color: #ff6f61;
+        }
+        .question {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff6f61;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff4c4c;
+        }
+        #result {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Happy 5th Anniversary, Harshita & Saathi! ❤️</h1>
+    <div class="heart">❤️</div>
+    <div class="question" id="question">What do you love most about each other?</div>
+    <button onclick="showAnswer()">Reveal the Love!</button>
+    <div id="result"></div>
+</div>
+
+<script>
+    function showAnswer() {
+        const answers = [
+            "Harshita loves your smile, Saathi! 😊",
+            "Saathi loves your kindness, Harshita! 💖",
+            "Together, you both make every moment special! 🌟",
+            "You both are perfect for each other! 💕"
+        ];
+        const randomIndex = Math.floor(Math.random() * answers.length);
+        document.getElementById('result').textContent = answers[randomIndex];
+    }
+</script>
+
+</body>
+</html>
